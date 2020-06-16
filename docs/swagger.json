@@ -1,0 +1,144 @@
+openapi: 3.0.1
+info:
+  title: defaultTitle
+  description: defaultDescription
+  version: '0.1'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /products/113:
+    delete:
+      description: Auto generated using Swagger Inspector
+      responses:
+        '200':
+          description: Auto generated using Swagger Inspector
+          content:
+            application/json; charset=utf-8:
+              schema:
+                type: string
+              examples: {}
+      servers:
+        - url: 'http://localhost:3000'
+    servers:
+      - url: 'http://localhost:3000'
+  /products:
+    get:
+      description: Auto generated using Swagger Inspector
+      responses:
+        '200':
+          description: Auto generated using Swagger Inspector
+          content:
+            application/json; charset=utf-8:
+              schema:
+                type: string
+              examples: {}
+      servers:
+        - url: 'http://localhost:3000'
+    post:
+      description: Auto generated using Swagger Inspector
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+            examples:
+              '0':
+                value: |-
+                  {
+                      "name": "Garhett"
+                  }
+              '1':
+                value: |-
+                  {
+                      "name": "Garhett"
+                  }
+      responses:
+        '201':
+          description: Auto generated using Swagger Inspector
+          content:
+            application/json; charset=utf-8:
+              schema:
+                type: string
+              examples: {}
+      servers:
+        - url: 'http://localhost:3000'
+    delete:
+      description: Auto generated using Swagger Inspector
+      parameters:
+        - name: name
+          in: query
+          schema:
+            type: string
+          example: hi
+      responses:
+        '404':
+          description: Auto generated using Swagger Inspector
+          content:
+            application/json; charset=utf-8:
+              schema:
+                type: string
+              examples: {}
+      servers:
+        - url: 'http://localhost:3000'
+    servers:
+      - url: 'http://localhost:3000'
+  /categories:
+    get:
+      description: Auto generated using Swagger Inspector
+      parameters:
+        - name: name
+          in: query
+          schema:
+            type: string
+          example: Tribute
+      responses:
+        '200':
+          description: Auto generated using Swagger Inspector
+          content:
+            application/json; charset=utf-8:
+              schema:
+                type: string
+              examples: {}
+      servers:
+        - url: 'http://localhost:3000'
+    put:
+      description: Auto generated using Swagger Inspector
+      parameters:
+        - name: name
+          in: query
+          schema:
+            type: string
+          example: songSucks
+      responses:
+        '404':
+          description: Auto generated using Swagger Inspector
+          content:
+            application/json; charset=utf-8:
+              schema:
+                type: string
+              examples: {}
+      servers:
+        - url: 'http://localhost:3000'
+    delete:
+      description: Auto generated using Swagger Inspector
+      parameters:
+        - name: name
+          in: query
+          schema:
+            type: string
+          example: Tribute
+      responses:
+        '404':
+          description: Auto generated using Swagger Inspector
+          content:
+            application/json; charset=utf-8:
+              schema:
+                type: string
+              examples: {}
+      servers:
+        - url: 'http://localhost:3000'
+    servers:
+      - url: 'http://localhost:3000'

@@ -1,0 +1,27 @@
+{
+  "categories": [
+    {
+      "name": "Tribute",
+      "category": "Musical Masterpiece",
+      "price": "$1099",
+      "description": "IT WAS THE BEST SONG IN THE WORLD! IT WAS THE BEST SONG IN THE WORRRLLLLDDDD",
+      "id": 111
+    }
+  ],
+  "products": [
+    {
+      "name": "Cheese",
+      "category": "dairy",
+      "id": 111,
+      "display_name": "Parmesan",
+      "description": "Great for all pasta. If you disagree with me... fight me"
+    },
+    {
+      "name": "hi",
+      "category": "re",
+      "description": "asdfasdg",
+      "price": 1.99,
+      "id": 112
+    }
+  ]
+}
