@@ -1,48 +1,42 @@
 'use strict';
 
 const express = require('express');
-
-// const ProductModel = require('../models/products-models')
-
 const router = express.Router();
 
+const ProductModel = require('../lib/models/products/products-collections.js')
+
+const Product = new ProductModel();
+
+router.get('/', handleGetAll)
+router.post('/', handlePost)
+router.get('/:id', handleGetId)
+router.put('/:id', handlePut)
+router.delete('/:id', handleDelete)
+
+async function handleGetAll(req, res) {
+  const results = await Product.get();
+  res.send(results)
+}
+
+async function handlePost(req, res) {
+  const results = await Product.create(req.body)
+  res.send('This was saved')
+}
+
+async function handleGetId (req, res) {
+  const results = await Product.get(req.params.id)
+  res.send(results)  
+}
+
+async function handlePut (req, res) {
+  const results = await Product.update(req.params.id, req.body)
+  res.send(`Updated ${req.params.id}`)
+}
+
+async function handleDelete(req, res) {
+  const results = await Product.delete(req.params.id)
+  res.send(`Product Id: ${req.params.id} has been deleted`) 
+}
 
 
-// let products = []
-
-
-router.post('/', (req, res) => {
-  products.push(req.body)
-
-  res.send('Product Saved')
-})
-
-router.get('/', (req, res) => {
-  
-  res.send(products)
-})
-
-router.get('/:id', (req, res) => {
-  products.forEach(val => {
-    if(val.id === req.params.id) {
-      res.send(val)
-    }    
-  })
-})
-
-router.put('/:id', (req, res) => {
-  const newRecord = req.body;
-  products.forEach(val => {
-    if (val.id === req.params.id) {
-      val = newRecord
-      res.send('Record has been updated')
-    }
-  })
-})
-
-router.delete('/:id', (req, res) => {
-  products.slice(req.params.id - 1)
-  res.send(`Product Id: ${req.params.id} has been deleted`)  
-})
-
-module.exports = router;
+module.exports = router

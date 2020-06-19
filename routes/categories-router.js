@@ -19,22 +19,22 @@ async function handleGetAll(req, res) {
 }
 
 async function handlePost(req, res) {
-  const results = await Category.create(req.body)
+  await Category.create(req.body)
   res.send('This was saved')
 }
 
 async function handleGetId (req, res) {
-  const results = await Category.get(req.params.id)
+  await Category.get(req.params.id)
   res.send(results)  
 }
 
 async function handlePut (req, res) {
-  const results = await Category.update(req.params.id, req.body)
+  await Category.update(req.params.id, req.body)
   res.send(`Updated ${req.params.id}`)
 }
 
 async function handleDelete(req, res) {
-  const results = await Category.delete(req.params.id)
+  await Category.delete(req.params.id)
   res.send(`Category Id: ${req.params.id} has been deleted`) 
 }
 
